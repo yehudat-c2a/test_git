@@ -15,5 +15,7 @@ jobs:
         run: docker build -t gta  .
       - name: run docker
         run: docker run -d -p 8000:8000 gta:latest
+      - name: Docker ps
+        run: docker ps
       - name: check server
         run: curl http://localhost:8000
