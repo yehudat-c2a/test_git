@@ -1,11 +1,16 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
-
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - uses: yehudat-c2a/test_git@master
+      - name: Check out repository code
+        uses: yehudat-c2a/test_git@master
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: docker build -t gta  .
