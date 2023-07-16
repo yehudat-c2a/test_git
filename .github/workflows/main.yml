@@ -6,8 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      # - name: Check out repository code
-      #   uses: yehudat-c2a/test_git@master
+      - name: Check out repository code
+        uses: yehudat-c2a/test_git@master
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
