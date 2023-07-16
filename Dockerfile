@@ -6,3 +6,4 @@ COPY run.sh /run.sh
 COPY main.py /main.py
 COPY hello.text /hello.text
 RUN chmod a+x /run.sh
+ENTRYPOINT ["/run.sh"]

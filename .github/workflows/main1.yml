@@ -14,4 +14,4 @@ jobs:
       - name: build docker
         run: docker build -t gta  .
       - name: run docker
-        run: docker run --rm -it --entrypoint /bin/bash  gta:latest
+        run: docker run -d gta:latest
