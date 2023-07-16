@@ -5,11 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: yehudat-c2a/test_git@master
-        with:
-          who-to-greet: 'Mona the Octocat'
+      - uses: yehudat-c2a/test_git@master
       # Use the output from the `hello` step
       - name: Get the output time
         run: docker build -t gta  .
